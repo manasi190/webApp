@@ -1,6 +1,8 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
+env_var = os.getenv('ENV_VAR')
 
 @app.route('/')
 def hello_world():
